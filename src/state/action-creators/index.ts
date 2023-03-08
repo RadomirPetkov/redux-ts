@@ -1,7 +1,8 @@
 import axios from "axios";
 import { ActionType } from "../action-types";
 import { Dispatch } from "redux";
-import { Action } from "../actions";
+import { Action, Login } from "../actions";
+
 
 export const searchRepositories = (term: string) => {
   return async (dispatch: Dispatch<Action>) => {
@@ -32,5 +33,14 @@ export const searchRepositories = (term: string) => {
         payload: error.message,
       });
     }
+  };
+};
+
+export const login = (name: string, password: string) => {
+  return async (dispatch: Dispatch<Login>) => {
+    dispatch({
+      type: ActionType.LOGIN_SUCCESSFUL,
+      payload: { name, password },
+    });
   };
 };

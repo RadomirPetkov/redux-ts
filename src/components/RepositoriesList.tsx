@@ -17,6 +17,8 @@ export const RepositoriesList: React.FC = () => {
 
   return (
     <div>
+      <h1>Search for packages</h1>
+
       <form onSubmit={submitForm}>
         <input
           type="text"
