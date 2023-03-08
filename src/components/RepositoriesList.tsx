@@ -21,9 +21,11 @@ export const RepositoriesList: React.FC = () => {
 
       <form onSubmit={submitForm}>
         <input
+        placeholder="example: react"
           type="text"
           value={term}
-          onChange={(e) => setTerm(e.target.value)}
+          onChange={(e) => setTerm(e.target.value)
+          }
         />
         <button>Search</button>
       </form>
